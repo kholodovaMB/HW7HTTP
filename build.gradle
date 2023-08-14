@@ -12,8 +12,16 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.HMB.Main'
+    }
+
+    from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+}
 test {
     useJUnitPlatform()
 }

@@ -1,12 +1,12 @@
 package org.HMB.exeptions;
 
-public class Exception extends RuntimeException{
+public class ExceptionServerCode extends RuntimeException{
 
-    public Exception(String message) {
+    public ExceptionServerCode(String message) {
         super(message);
     }
 
-    public Exception(String message, Throwable cause) {
+    public ExceptionServerCode(String message, Throwable cause) {
         super(message, cause);
     }
 }
